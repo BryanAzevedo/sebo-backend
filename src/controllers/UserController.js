@@ -1,9 +1,10 @@
-const connection = require("../database/connection");
-const crypto = require("crypto");
+const crypto = require('crypto');
+
+const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    const users = await connection("users").select("*");
+    const users = await connection('users').select('*');
 
     return response.json(users);
   },
@@ -15,7 +16,7 @@ module.exports = {
       .pbkdf2Sync(senha, email, 1000, 64, `sha512`)
       .toString(`hex`);
 
-    await connection("users").insert({
+    await connection('users').insert({
       id,
       name,
       email,
