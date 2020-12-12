@@ -20,7 +20,6 @@ module.exports = {
       id,
       name,
       email,
-      senha,
       telefone,
       book,
       cep,
