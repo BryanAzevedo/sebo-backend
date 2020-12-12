@@ -3,13 +3,9 @@ const express = require('express');
 const routes = express.Router();
 
 routes.post('/users', (request, response) => {
-  const body = request.body;
+  const { name, email, senha, telefone, book, cep, endereco } = request.body;
 
-  console.log(body);
-
-  return response.json({
-    livro: 'Além do bem e do mal',
-  });
+  return response.json({});
 });
 
 module.exports = routes;
