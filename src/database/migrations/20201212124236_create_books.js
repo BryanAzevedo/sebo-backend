@@ -4,7 +4,7 @@ exports.up = function(knex) {
     table.string('name').notNullable();
     table.string('autor').notNullable();
     table.string('resumo').notNullable();
-    table.string('foto').notNullable();
+    table.binary('foto', 64).notNullable();
   });
 };
 
