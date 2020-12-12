@@ -3,7 +3,7 @@ exports.up = function(knex) {
     table.string('id').primary();
     table.string('name').notNullable();
     table.string('email').notNullable();
-    table.string('senha').notNullable();
+    //table.string('senha').notNullable();
     table.string('telefone').notNullable();
     table.string('book').notNullable();
     table.string('cep').notNullable();
